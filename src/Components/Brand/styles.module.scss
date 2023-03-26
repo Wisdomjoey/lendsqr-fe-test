@@ -1,0 +1,19 @@
+@import '../../utils/mixins.module.scss';
+@import '../../utils/constants.module.scss';
+
+.brand {
+  @include displayCenter(center, center);
+  align-self: flex-start;
+  justify-self: flex-start;
+  gap: 10px;
+
+  img {
+    width: 23px;
+  }
+}
+
+.brand__txt {
+  color: $theme-text;
+  font-weight: 600;
+  font-size: 30px;
+}

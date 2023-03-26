@@ -1,0 +1,16 @@
+@mixin displayCenter($align, $justify) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+@mixin flexD1 {
+  flex-direction: column;
+  flex: 1;
+}
+
+@mixin transC {
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: .1em;
+}

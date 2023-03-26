@@ -1,0 +1,42 @@
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-UltLt.otf);
+  font-weight: 200;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-Regular.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-Medium.otf);
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-Demi.otf);
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-Bold.otf);
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: Avenir;
+  src: url(../assets/fonts/AvenirNextLTPro-Heavy.otf);
+  font-weight: 900;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Avenir;
+}
