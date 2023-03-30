@@ -30,7 +30,7 @@
 
   div {
     @include xs {
-      transform: scale(.75) !important;
+      transform: scale(.6) !important;
     }
   
     @include sm {
@@ -60,10 +60,12 @@
 
   @include xs {
     @include displayCenter(center, flex-end);
+    padding-right: 20px;
   }
 
   @include sm {
     @include displayCenter(center, flex-end);
+    padding-right: 20px;
   }
 }
 
