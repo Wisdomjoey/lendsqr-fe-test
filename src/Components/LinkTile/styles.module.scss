@@ -1,0 +1,39 @@
+@import "../../utils/mixins.module.scss";
+@import "../../utils/constants.module.scss";
+@import "../../utils/breakpoints.module.scss";
+
+.tile__container {
+  @include displayCenter(center, flex-start);
+  @include widthH(40px);
+  padding: 0px 25px;
+  gap: 8px;
+  background-color: white;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #f7f7f7;
+  }
+
+  &.tile__active {
+    border-left: 2px solid $theme-color;
+    background-color: rgba(57, 205, 204, .06);
+
+    p {
+      opacity: 1 !important;
+    }
+  }
+
+  p {
+    font-size: 13px;
+    color: $theme-text;
+    opacity: .6;
+  }
+
+  img {
+    width: 13px;
+  }
+}
+
+.activep {
+  opacity: 1 !important;
+}

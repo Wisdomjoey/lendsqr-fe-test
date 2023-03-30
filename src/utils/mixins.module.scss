@@ -14,3 +14,22 @@
   text-transform: uppercase;
   letter-spacing: .1em;
 }
+
+@mixin widthH($height) {
+  width: 100%;
+  height: $height;
+}
+
+@mixin smallD {
+  flex: none;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+@mixin bg {
+  border-radius: 5px;
+  background-color: white;
+}

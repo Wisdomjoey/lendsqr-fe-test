@@ -1,0 +1,54 @@
+@import "../../utils/mixins.module.scss";
+@import "../../utils/constants.module.scss";
+@import "../../utils/breakpoints.module.scss";
+
+.info__section {
+  width: 100%;
+	@include displayCenter(flex-start, center);
+	flex-direction: column;
+  padding: 25px 0px;
+  border-bottom: 1px solid rgba(84, 95, 125, .2);
+
+  & > span {
+    margin-bottom: 25px;
+    color: $theme-text;
+    font-size: 14px;
+    font-weight: 500;
+  }
+
+  &:first-of-type {
+    padding: 0px 0px 25px;
+  }
+
+  &:last-of-type {
+    border: none;
+  }
+}
+
+.main__info {
+  width: 100%;
+	@include displayCenter(center, flex-start);
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.info__content {
+  width: fit-content;
+	@include displayCenter(flex-start, center);
+	flex-direction: column;
+  gap: 5px;
+  min-width: 160px;
+  // flex: 1;
+
+  p {
+    color: $light-text;
+    font-size: 12px;
+    text-transform: uppercase;
+  }
+
+  span {
+    color: $light-text;
+    font-size: 13px;
+    font-weight: 500;
+  }
+}

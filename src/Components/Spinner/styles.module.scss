@@ -1,0 +1,8 @@
+@import "../../utils/mixins.module.scss";
+@import "../../utils/constants.module.scss";
+@import "../../utils/breakpoints.module.scss";
+
+.spinner__container {
+	@include widthH(100%);
+  @include displayCenter(center, center);
+}

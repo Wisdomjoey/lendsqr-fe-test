@@ -1,3 +1,6 @@
+@import "./constants.module.scss";
+@import "./mixins.module.scss";
+
 @font-face {
   font-family: Avenir;
   src: url(../assets/fonts/AvenirNextLTPro-UltLt.otf);
@@ -39,4 +42,73 @@
   margin: 0;
   box-sizing: border-box;
   font-family: Avenir;
+}
+
+.App {
+  height: 100vh;
+  position: relative;
+}
+
+body {
+  background-color: $background;
+}
+
+.filter__container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  display: none;
+  position: absolute;
+  background-color: white;
+  width: 270px;
+  padding: 30px 20px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  z-index: 5;
+}
+
+.filter__sect {
+  @include displayCenter(flex-start, center);
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;
+
+  p {
+    font-size: 14px;
+  }
+}
+
+.select__input {
+  @include displayCenter(center, flex-start);
+  width: 100%;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid $theme-light;
+  padding: 0px 10px;
+
+  input {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+
+    &::placeholder {
+      color: $light-text;
+      font-size: 13px;
+      opacity: .7;
+    }
+  }
+
+  select {
+    outline: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+
+    options {
+      color: $light-text;
+      font-size: 13px;
+      opacity: .7;
+    }
+  }
 }

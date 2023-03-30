@@ -1,0 +1,174 @@
+@import "../../utils/mixins.module.scss";
+@import "../../utils/constants.module.scss";
+@import "../../utils/breakpoints.module.scss";
+
+.navbar__container {
+  @include displayCenter(center, flex-start);
+	@include widthH(65px);
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: white;
+  box-shadow: 3px 0px 20px rgba(0, 0, 0, 0.08);
+}
+
+.brand__container {
+	width: 250px;
+  height: 100%;
+  padding: 0px 10px;
+	@include displayCenter(center, flex-start);
+
+  @include xs {
+    width: fit-content;
+    flex: 1;
+  }
+
+  @include sm {
+    width: fit-content;
+    flex: 1;
+  }
+
+  div {
+    @include xs {
+      transform: scale(.75) !important;
+    }
+  
+    @include sm {
+      transform: scale(.75) !important;
+    }
+  }
+}
+
+.nav__content {
+  flex: 1;
+  @include displayCenter(center, space-between);
+  padding: 0px 50px;
+
+  @include xs {
+    justify-content: center;
+    padding: 0px 50px 0px 0px;
+  }
+
+  @include sm {
+    justify-content: center;
+  }
+}
+
+.left__nav {
+  @include displayCenter(center, flex-start);
+  flex: 1;
+
+  @include xs {
+    @include displayCenter(center, flex-end);
+  }
+
+  @include sm {
+    @include displayCenter(center, flex-end);
+  }
+}
+
+.search {
+  width: 300px;
+  height: 35px;
+  padding-left: 17px;
+  border-radius: 5px;
+  @include displayCenter(center, space-between);
+  border: 1px solid $theme-light;
+
+  input {
+    flex: 1;
+    outline: none;
+    border: none;
+    height: 100%;
+
+    &::placeholder {
+      color: $light-text;
+      font-size: 12px;
+      opacity: .8;
+    }
+  }
+
+  @include xs {
+    width: 100%;
+  }
+
+  @include sm {
+    width: 100%;
+  }
+}
+
+.search__icon {
+  width: 50px;
+  height: 100%;
+  border-radius: 0px 5px 5px 0px;
+  background-color: $theme-color;
+  @include displayCenter(center, center);
+  cursor: pointer;
+
+  @include xs {
+    width: 35px;
+  }
+
+  @include sm {
+    width: 35px;
+  }
+}
+
+.right__nav {
+  @include displayCenter(center, flex-end);
+  flex: 1;
+  gap: 30px;
+
+  & > p {
+    font-size: 12px;
+    color: $theme-text;
+    text-decoration: underline;
+    cursor: pointer;
+  }
+
+  & > img {
+    width: 15px;
+    cursor: pointer;
+  }
+
+  @include xs {
+    display: none;
+  }
+
+  @include sm {
+    display: none;
+  }
+}
+
+.profile__container {
+  @include displayCenter(center, center);
+  gap: 12px;
+}
+
+.profile {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  box-shadow: 3px 5px 20px rgba(0, 0, 0, 0.08);
+
+  img {
+    width: 100%;
+    object-fit: cover;
+  }
+}
+
+.profile__name {
+  @include displayCenter(center, center);
+  gap: 7px;
+  cursor: pointer;
+
+  p {
+    font-size: 12px;
+    color: $theme-text;
+    font-weight: 500;
+  }
+
+  img {
+    width: 7px;
+  }
+}

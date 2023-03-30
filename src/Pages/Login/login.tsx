@@ -1,12 +1,14 @@
 import { useState } from "react";
 import Brand from "../../Components/Brand/brand";
 import styles from "./styles.module.scss";
-import login from '../../assets/images/pablo-sign-in 1.png';
+import login from "../../assets/images/pablo-sign-in 1.png";
+import { useNavigate } from "react-router";
 
 function LoginPage() {
 	const [focused, setfocus] = useState(false);
 	const [focused1, setfocus1] = useState(false);
 	const [show, setshow] = useState(false);
+	const navigate = useNavigate();
 
 	return (
 		<div className={styles["login__container"]}>
@@ -26,7 +28,9 @@ function LoginPage() {
 						<p>Enter details to login.</p>
 
 						<div
-							className={`${styles["input__container"]} ${focused && styles["active"]}`}
+							className={`${styles["input__container"]} ${
+								focused ? styles["active"] : undefined
+							}`}
 						>
 							<input
 								name="email"
@@ -38,7 +42,9 @@ function LoginPage() {
 						</div>
 
 						<div
-							className={`${styles["input__container"]} ${focused1 && styles["active"]}`}
+							className={`${styles["input__container"]} ${
+								focused1 ? styles["active"] : undefined
+							}`}
 						>
 							<input
 								name="password"
@@ -58,7 +64,12 @@ function LoginPage() {
 
 						<span className={styles["form__span"]}>forgot password?</span>
 
-						<button className={styles["form__button"]}>log in</button>
+						<button
+							className={styles["form__button"]}
+							onClick={() => navigate("/dashboard")}
+						>
+							log in
+						</button>
 					</form>
 				</div>
 			</div>

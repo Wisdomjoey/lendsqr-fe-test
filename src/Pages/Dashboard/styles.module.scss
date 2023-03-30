@@ -1,0 +1,72 @@
+@import "../../utils/mixins.module.scss";
+@import "../../utils/constants.module.scss";
+@import "../../utils/breakpoints.module.scss";
+
+.dashboard__container {
+  display: flex;
+  flex-direction: column;
+  @include widthH(100%);
+  position: relative;
+}
+
+.content__container {
+  @include displayCenter(center, space-between);
+	@include widthH(100%);
+  position: relative;
+  padding-top: 65px;
+}
+
+.main__content {
+	@include widthH(100%);
+  @include displayCenter(flex-start, center);
+  position: relative;
+}
+
+.sidebar__shadow {
+  // width: 250px;
+  min-width: 250px;
+  height: 100%;
+  background-color: transparent;
+
+  @include xs {
+    display: none;
+  }
+
+  @include sm {
+    display: none;
+  }
+
+  @include md {
+    min-width: 300px;
+  }
+}
+
+.main__container {
+	@include widthH(fit-content);
+  @include displayCenter(flex-start, center);
+  flex-direction: column;
+  padding: 50px;
+
+  & > span {
+    font-size: 20px;
+    font-weight: 500;
+    color: $theme-text;
+    margin-bottom: 40px;
+  }
+
+  @include xs {
+    padding: 30px;
+  }
+
+  @include sm {
+    padding: 30px;
+  }
+}
+
+.stats__content {
+  @include displayCenter(flex-start, center);
+	@include widthH(fit-content);
+  gap: 20px;
+  margin-bottom: 25px;
+  flex-wrap: wrap;
+}
